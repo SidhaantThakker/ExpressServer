@@ -33,7 +33,8 @@ router.post('/', (req,res) => {
     }
 
     members.push(newMember);
-    res.json(members);
+    res.json(members); // for the api to work
+    //res.redirect('/'); for the page to work
 });
 
 //Update Member
