@@ -4,10 +4,12 @@ const logger = require('./middleware/logger');
 
 const app = express();
 
-
-
 // Init Middleware
 // app.use(logger);
+
+//Body Parser (Middleware)
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 // Set Static Folder
 app.use(express.static(path.join(__dirname,'public')));
